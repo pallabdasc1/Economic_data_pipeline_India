@@ -1,0 +1,5 @@
+{"timestamp":"2026-04-05T09:35:51.665068Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-04-05T09:35:51.670305Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/dbt_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-04-05T09:35:51.704320Z","level":"warning","event":"The `airflow.operators.trigger_dagrun.TriggerDagRunOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.trigger_dagrun.TriggerDagRunOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/dbt_pipeline.py","lineno":2,"logger":"py.warnings"}
+{"timestamp":"2026-04-05T09:35:51.985419Z","level":"info","event":"Triggering Dag Run.","trigger_dag_id":"dbt_run_dag","logger":"task","filename":"task_runner.py","lineno":1210}
+{"timestamp":"2026-04-05T09:35:52.014083Z","level":"info","event":"Dag Run triggered successfully.","trigger_dag_id":"dbt_run_dag","logger":"task","filename":"task_runner.py","lineno":1244}

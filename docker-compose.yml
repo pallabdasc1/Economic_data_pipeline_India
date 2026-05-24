@@ -1,0 +1,45 @@
+
+services:
+  postgres:
+    image: postgres:14
+    container_name: postgres
+    environment:
+      POSTGRES_USER: airflow_user
+      POSTGRES_PASSWORD: airflow_pass
+      POSTGRES_DB: airflow_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  airflow:
+    image: apache/airflow:3.1.7
+    container_name: airflow
+    user: root
+    depends_on:
+      - postgres
+    environment:
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./airflow/plugins:/opt/airflow/plugins
+      - ./dbt:/opt/airflow/dbt
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./postgres/data:/opt/airflow/data
+    ports:
+      - "8080:8080"
+    command: standalone
+
+  dbt:
+    image: fishtownanalytics/dbt:1.0.0
+    container_name: dbt
+    volumes:
+     - ./dbt:/usr/app
+    working_dir: /usr/app
+    entrypoint: /bin/bash
+    command: -c "tail -f /dev/null"
+
+volumes:
+  postgres_data:

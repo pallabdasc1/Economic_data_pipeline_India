@@ -1,0 +1,128 @@
+[0m22:32:51.671888 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe41a63b430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe4193fb340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe4193fb2e0>]}
+
+
+============================== 22:32:51.679587 | bdcc2e3a-9b3a-43c7-a8dd-ed20cf3b66a5 ==============================
+[0m22:32:51.679587 [info ] [MainThread]: Running with dbt=1.11.7
+[0m22:32:51.680697 [debug] [MainThread]: running dbt with arguments {'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'version_check': 'True', 'log_format': 'default', 'partial_parse': 'True', 'log_path': 'logs', 'target_path': 'None', 'printer_width': '80', 'cache_selected_only': 'False', 'empty': 'None', 'no_print': 'None', 'introspect': 'True', 'use_colors': 'True', 'invocation_command': 'dbt init economic_data_project', 'static_parser': 'True', 'indirect_selection': 'eager', 'debug': 'False', 'profiles_dir': '/home/pallab/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'quiet': 'False'}
+[0m22:32:51.811050 [info ] [MainThread]: Creating dbt configuration folder at /home/pallab/.dbt
+[0m22:32:51.838208 [debug] [MainThread]: Starter project path: /mnt/c/Users/palla/data-stack/venv/lib/python3.10/site-packages/dbt/include/starter_project
+[0m22:32:52.071490 [info ] [MainThread]: 
+Your new dbt project "economic_data_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m22:32:52.072729 [info ] [MainThread]: Setting up your profile.
+[0m22:34:19.823431 [error] [MainThread]: Encountered an error:
+
+[0m22:34:19.890570 [error] [MainThread]: Traceback (most recent call last):
+  File "/mnt/c/Users/palla/data-stack/venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/mnt/c/Users/palla/data-stack/venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+  File "/mnt/c/Users/palla/data-stack/venv/lib/python3.10/site-packages/dbt/cli/main.py", line 483, in init
+    results = task.run()
+  File "/mnt/c/Users/palla/data-stack/venv/lib/python3.10/site-packages/dbt/task/init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "/mnt/c/Users/palla/data-stack/venv/lib/python3.10/site-packages/dbt/task/init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/mnt/c/Users/palla/data-stack/venv/lib/python3.10/site-packages/dbt/task/init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/mnt/c/Users/palla/data-stack/venv/lib/python3.10/site-packages/dbt/task/init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "/mnt/c/Users/palla/data-stack/venv/lib/python3.10/site-packages/dbt/task/init.py", line 129, in generate_target_from_input
+    target[key] = click.prompt(
+  File "/mnt/c/Users/palla/data-stack/venv/lib/python3.10/site-packages/click/termui.py", line 171, in prompt
+    value = prompt_func(prompt)
+  File "/mnt/c/Users/palla/data-stack/venv/lib/python3.10/site-packages/click/termui.py", line 154, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m22:34:19.897457 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 93.5061, "process_in_blocks": "39832", "process_kernel_time": 0.503229, "process_mem_max_rss": "101048", "process_out_blocks": "0", "process_user_time": 1.025097}
+[0m22:34:19.899396 [debug] [MainThread]: Command `dbt init` failed at 22:34:19.899219 after 93.51 seconds
+[0m22:34:19.900673 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe41a63b430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe4188c59f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe4188c6e60>]}
+[0m22:34:19.901838 [debug] [MainThread]: Flushing usage events
+[0m22:34:40.511632 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f774e4133d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f774d1d7280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f774d1d7220>]}
+
+
+============================== 22:34:40.519654 | 41d77b92-c358-4e3e-9d01-0246e182b84a ==============================
+[0m22:34:40.519654 [info ] [MainThread]: Running with dbt=1.11.7
+[0m22:34:40.520685 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'static_parser': 'True', 'printer_width': '80', 'partial_parse': 'True', 'empty': 'None', 'use_experimental_parser': 'False', 'version_check': 'True', 'invocation_command': 'dbt init economic_data_project', 'log_path': 'logs', 'use_colors': 'True', 'write_json': 'True', 'target_path': 'None', 'introspect': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'indirect_selection': 'eager', 'debug': 'False', 'log_format': 'default', 'fail_fast': 'False', 'profiles_dir': '/home/pallab/.dbt'}
+[0m22:34:40.674858 [info ] [MainThread]: A project called economic_data_project already exists here.
+[0m22:34:40.677369 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.21772172, "process_in_blocks": "3584", "process_kernel_time": 0.356459, "process_mem_max_rss": "95932", "process_out_blocks": "0", "process_user_time": 1.069378}
+[0m22:34:40.678595 [debug] [MainThread]: Command `dbt init` succeeded at 22:34:40.678467 after 0.22 seconds
+[0m22:34:40.679567 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f774e4133d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f774d1d6380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f774d1d71c0>]}
+[0m22:34:40.680615 [debug] [MainThread]: Flushing usage events
+[0m22:34:42.242551 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:35:02.792613 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0560ea7430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f055fc632b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f055fc63250>]}
+
+
+============================== 22:35:02.800366 | 5275bdf0-1fc3-442b-9d83-53a32b5ba63d ==============================
+[0m22:35:02.800366 [info ] [MainThread]: Running with dbt=1.11.7
+[0m22:35:02.801493 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'log_format': 'default', 'log_path': 'logs', 'cache_selected_only': 'False', 'target_path': 'None', 'empty': 'None', 'static_parser': 'True', 'debug': 'False', 'indirect_selection': 'eager', 'quiet': 'False', 'use_experimental_parser': 'False', 'no_print': 'None', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'printer_width': '80', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'invocation_command': 'dbt init economic_data_project2', 'fail_fast': 'False', 'profiles_dir': '/home/pallab/.dbt', 'partial_parse': 'True', 'write_json': 'True'}
+[0m22:35:03.004116 [debug] [MainThread]: Starter project path: /mnt/c/Users/palla/data-stack/venv/lib/python3.10/site-packages/dbt/include/starter_project
+[0m22:35:03.201924 [info ] [MainThread]: 
+Your new dbt project "economic_data_project2" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m22:35:03.203104 [info ] [MainThread]: Setting up your profile.
+[0m22:37:17.776492 [info ] [MainThread]: Profile economic_data_project2 written to /home/pallab/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m22:37:17.790751 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 142.06627, "process_in_blocks": "3720", "process_kernel_time": 0.413851, "process_mem_max_rss": "100904", "process_out_blocks": "8", "process_user_time": 1.091862}
+[0m22:37:17.794640 [debug] [MainThread]: Command `dbt init` succeeded at 22:37:17.794364 after 142.07 seconds
+[0m22:37:17.798089 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0560ea7430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f055fb5ca00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f055fc62500>]}
+[0m22:37:17.801531 [debug] [MainThread]: Flushing usage events
+[0m22:37:19.445804 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:49:14.978882 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde0d6a7370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde0c474cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde0c474c40>]}
+
+
+============================== 19:49:15.003703 | b7e0c1f3-e21f-4f13-9cbf-e0e242226cb9 ==============================
+[0m19:49:15.003703 [info ] [MainThread]: Running with dbt=1.11.7
+[0m19:49:15.005462 [debug] [MainThread]: running dbt with arguments {'log_path': 'logs', 'static_parser': 'True', 'empty': 'False', 'debug': 'False', 'target_path': 'None', 'printer_width': '80', 'use_experimental_parser': 'False', 'write_json': 'True', 'profiles_dir': '/home/pallab/.dbt', 'log_cache_events': 'False', 'introspect': 'True', 'warn_error': 'None', 'fail_fast': 'False', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'invocation_command': 'dbt run', 'no_print': 'None', 'log_format': 'default', 'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'cache_selected_only': 'False', 'indirect_selection': 'eager'}
+[0m19:49:15.008834 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /mnt/c/Users/palla/data-stack/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m19:49:15.029980 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.11803942, "process_in_blocks": "13192", "process_kernel_time": 0.635426, "process_mem_max_rss": "95340", "process_out_blocks": "8", "process_user_time": 1.422144}
+[0m19:49:15.032092 [debug] [MainThread]: Command `dbt run` failed at 19:49:15.031911 after 0.12 seconds
+[0m19:49:15.035160 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde0d6a7370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde0c4753f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde0c474cd0>]}
+[0m19:49:15.037070 [debug] [MainThread]: Flushing usage events
+[0m19:49:16.605978 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:54:38.703388 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fce1b3a7340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fce1a170d30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fce1a170cd0>]}
+
+
+============================== 19:54:38.711159 | ef9b5bd7-7e5b-40f3-9098-b955b9c46f3b ==============================
+[0m19:54:38.711159 [info ] [MainThread]: Running with dbt=1.11.7
+[0m19:54:38.712528 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run', 'log_format': 'default', 'target_path': 'None', 'partial_parse': 'True', 'introspect': 'True', 'empty': 'False', 'cache_selected_only': 'False', 'printer_width': '80', 'version_check': 'True', 'profiles_dir': '/home/pallab/.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'debug': 'False', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'static_parser': 'True', 'log_path': 'logs', 'write_json': 'True', 'fail_fast': 'False', 'no_print': 'None'}
+[0m19:54:38.714455 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /mnt/c/Users/palla/data-stack/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m19:54:38.718141 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.06549545, "process_in_blocks": "22400", "process_kernel_time": 0.350626, "process_mem_max_rss": "95376", "process_out_blocks": "0", "process_user_time": 1.146643}
+[0m19:54:38.719264 [debug] [MainThread]: Command `dbt run` failed at 19:54:38.719139 after 0.07 seconds
+[0m19:54:38.720227 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fce1b3a7340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fce1a171450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fce1a170d30>]}
+[0m19:54:38.721089 [debug] [MainThread]: Flushing usage events
+[0m19:54:40.231940 [debug] [MainThread]: An error was encountered while trying to flush usage events
